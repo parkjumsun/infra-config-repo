@@ -15,5 +15,5 @@ spec:
   ports:
     - port: 80
       targetPort: 8081
-      nodePort: 8081
+      nodePort: 31081
   type: NodePort
