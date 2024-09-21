@@ -25,13 +25,14 @@ fullnameOverride: ""
 
 # -- Extra arguments for argocd-image-updater not defined in `config.argocd`.
 # If a flag contains both key and value, they need to be split to a new entry
-extraArgs: []
+extraArgs:
+  interval: 30s
   # - --disable-kubernetes
   # - --dry-run
   # - --health-port
   # - 8080
-  - --interval
-  - 30s
+  # - --interval
+  # - 30s
   # - --kubeconfig
   # - ~/.kube/config
   # - --match-application-name
