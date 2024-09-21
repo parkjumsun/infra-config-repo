@@ -11,7 +11,7 @@ pipeline {
     }
 
     stages {
-        stage('네임스페이스 관리') {
+        stage('manage namespace') {
             steps {
                 script{
                     if (params.DEPLOY_TYPE == "namespace_create") {
@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        stage('헬름 배포 관리') {
+        stage('deploy argo') {
             steps {
                 script{
                     if (params.DEPLOY_TYPE == "helm_upgrade") {
@@ -37,7 +37,7 @@ pipeline {
                         // image-updater일 경우 도커허브 credentials 주입
                         if (params.TARGET_ARGO == "argocd-image-updater") {
                             // https://argocd-image-updater.readthedocs.io/en/stable/basics/update-methods/
-                            withCredentials([usernamePassword(credentialsId: 'docker_password', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                            withCredentials([usernamePassword(credentialsId: 'dockerhub-jenkins', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                                 HELM_DEPLOY_COMMAND += " --set config.registries[0].credentials=env:DOCKER_HUB_CREDS="+ '${USERNAME}' + ":" + '${PASSWORD}'
                             }
                         }
