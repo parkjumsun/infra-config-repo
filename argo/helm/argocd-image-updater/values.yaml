@@ -30,8 +30,8 @@ extraArgs: []
   # - --dry-run
   # - --health-port
   # - 8080
-  # - --interval
-  # - 2m
+  - --interval
+  - 30s
   # - --kubeconfig
   # - ~/.kube/config
   # - --match-application-name
