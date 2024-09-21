@@ -22,11 +22,16 @@ imagePullSecrets: []
 nameOverride: ""
 # -- Global fullname (argocd-image-updater.fullname in _helpers.tpl) override
 fullnameOverride: ""
-extraArgs: []
-  # - --interval: 30s
+
+# -- Extra arguments for argocd-image-updater not defined in `config.argocd`.
+# If a flag contains both key and value, they need to be split to a new entry
+extraArgs:
   # - --disable-kubernetes
-  # - --interval
-  # - 30s
+  # - --dry-run
+  # - --health-port
+  # - 8080
+  - --interval
+  - 2m
   # - --kubeconfig
   # - ~/.kube/config
   # - --match-application-name
