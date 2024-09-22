@@ -31,7 +31,7 @@ extraArgs:
   # - --health-port
   # - 8080
   - --interval
-  - 2m
+  - 15s
   # - --kubeconfig
   # - ~/.kube/config
   # - --match-application-name
