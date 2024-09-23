@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice(choices: ['option', 'namespace_create', 'namespace_delete', 'helm_upgrade', 'helm_uninstall'], name: 'DEPLOY_TYPE', description: '배포 타입 선택')
-        choice(choices: ['option', 'argo-cd', 'argocd-image-updater', 'argo-rollouts'], name: 'TARGET_ARGO', description: 'Argo 대상 선택')
+        choice(choices: ['option', 'istio-istiod', 'istio-base', 'istio-gateway'], name: 'TARGET_ISTIO', description: 'Istio 대상 선택')
     }
 
     environment {
@@ -29,33 +29,15 @@ pipeline {
             steps {
                 script{
                     if (params.DEPLOY_TYPE == "helm_upgrade") {
-                        HELM_DEPLOY_COMMAND =  "helm upgrade ${params.TARGET_ARGO} ./${INSTALL_PATH}/helm/${params.TARGET_ARGO} " +
-                            " -f ./${INSTALL_PATH}/helm/${params.TARGET_ARGO}/values-dev.yaml" +
+                        HELM_DEPLOY_COMMAND =  "helm upgrade ${params.TARGET_ISTIO} ./${INSTALL_PATH}/helm/${params.TARGET_ISTIO} " +
+                            " -f ./${INSTALL_PATH}/helm/${params.TARGET_ISTIO}/values-dev.yaml" +
                             " -n istio-system --install " + 
                             " --wait --timeout=10m "   // 최대 10분으로 설정
 
-                        // image-updater일 경우 도커허브 credentials 주입
-                        if (params.TARGET_ARGO == "argocd-image-updater") {
-                            // https://argocd-image-updater.readthedocs.io/en/stable/basics/update-methods/
-                            withCredentials([usernamePassword(credentialsId: 'dockerhub-jenkins', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
-                                HELM_DEPLOY_COMMAND += " --set config.registries[0].credentials=env:DOCKER_HUB_CREDS="+ '${USERNAME}' + ":" + '${PASSWORD}'
-                            }
-                        }
-
                         sh "eval ${HELM_DEPLOY_COMMAND}"
-                        // sh "helm update argo-cd -n argo --kubeconfig " + '${KUBECONFIG}' + " --wait --timeout=10m "
 
                     } else if (params.DEPLOY_TYPE == "helm_uninstall") {
-                        sh "helm uninstall ${params.TARGET_ARGO} -n argo "
-
-                        // CRD 삭제
-                        if (params.TARGET_ARGO == "argo-cd") {
-                            sh "kubectl delete crd applications.argoproj.io applicationsets.argoproj.io appprojects.argoproj.io "
-                        }
-                        if (params.TARGET_ARGO == "argo-rollouts") {
-                            sh "kubectl delete crd analysisruns.argoproj.io analysistemplates.argoproj.io clusteranalysistemplates.argoproj.io "
-                            sh "kubectl delete crd experiments.argoproj.io rollouts.argoproj.io "
-                        }
+                        sh "helm uninstall ${params.TARGET_ISTIO} -n istio-system "
                     } else {
                         echo "skip deploy"
                     }
