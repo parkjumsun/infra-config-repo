@@ -11,25 +11,35 @@ Additionally, I’ve added a git submodule to demonstrate the infrastructure set
 
 Here is a list of infrastructure tool included in this repository.
 
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
-    <img src="./images/calico.png" alt="calico" style="max-width: 100%;">
-    <div>calico</div>
+<div>
+  <div>
+    <img src="./images/calico.png" alt="calico" width=150>
+    <div align="center" width=150>calico</div>
   </div>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
-    <img src="./images/argo.png" alt="argo" style="max-width: 100%;">
-    <div>argo</div>
+<br/>
+<br/>
+  <div>
+    <img src="./images/argo.png" alt="argo" width=150>
+    <div align="center" width=150>argo</div>
   </div>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
-    <img src="./images/dashboard.png" alt="k8s-dashboard" style="max-width: 100%;">
-    <div>k8s-dashboard</div>
+<br/>
+<br/>
+  <div>
+    <img src="./images/dashboard.png" alt="k8s-dashboard" width=150>
+    <div align="center" width=150>k8s-dashboard</div>
   </div>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
-    <img src="./images/metric.png" alt="k8s-metric-server" style="max-width: 100%;">
-    <div>k8s-metric-server</div>
+<br/>
+<br/>
+  <div>
+    <img src="./images/metric.png" alt="k8s-metric-server" width=150>
+    <div align="center" width=150>k8s-metric-server</div>
   </div>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
-    <img src="./images/istio.png" alt="istio" style="max-width: 100%;">
-    <div>istio</div>
+<br/>
+<br/>
+  <div>
+    <img src="./images/istio.png" alt="istio" width=150>
+    <div align="center" width=150>istio</div>
   </div>
+<br/>
+<br/>
 </div>
