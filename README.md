@@ -11,39 +11,25 @@ Additionally, I’ve added a git submodule to demonstrate the infrastructure set
 
 Here is a list of infrastructure tool included in this repository.
 
-
-<div>
-  <style>
-  .image--box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    margin: 3em;
-  }
-  </style>
-
-  <div class="image--box">
-    <img src="./images/calico.png">
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
+    <img src="./images/calico.png" alt="calico" style="max-width: 100%;">
     <div>calico</div>
   </div>
-  <div class="image--box">
-    <img src="./images/argo.png">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
+    <img src="./images/argo.png" alt="argo" style="max-width: 100%;">
     <div>argo</div>
   </div>
-  <div class="image--box">
-    <img src="./images/dashboard.png">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
+    <img src="./images/dashboard.png" alt="k8s-dashboard" style="max-width: 100%;">
     <div>k8s-dashboard</div>
   </div>
-  <div class="image--box">
-    <img src="./images/metric.png" >
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
+    <img src="./images/metric.png" alt="k8s-metric-server" style="max-width: 100%;">
     <div>k8s-metric-server</div>
   </div>
-  <div class="image--box">
-    <img src="./images/istio.png">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10rem; margin: 3em;">
+    <img src="./images/istio.png" alt="istio" style="max-width: 100%;">
     <div>istio</div>
-  </div>  
-
+  </div>
 </div>
-
