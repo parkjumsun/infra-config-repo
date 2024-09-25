@@ -13,31 +13,41 @@ Here is a list of infrastructure tool included in this repository.
 
 <div>
   <div>
-    <img src="./images/calico.png" alt="calico" width=150>
+    <div align="center">
+      <img src="./images/calico.png" alt="calico" width=150>
+    </div>
     <div align="center" width=150>calico</div>
   </div>
 <br/>
 <br/>
   <div>
+    <div align="center">
     <img src="./images/argo.png" alt="argo" width=150>
+    </div>
     <div align="center" width=150>argo</div>
   </div>
 <br/>
 <br/>
   <div>
-    <img src="./images/dashboard.png" alt="k8s-dashboard" width=150>
+    <div align="center">
+      <img src="./images/dashboard.png" alt="k8s-dashboard" width=150>
+    </div>
     <div align="center" width=150>k8s-dashboard</div>
   </div>
 <br/>
 <br/>
   <div>
-    <img src="./images/metric.png" alt="k8s-metric-server" width=150>
+    <div align="center">
+      <img src="./images/metric.png" alt="k8s-metric-server" width=150>
+    </div>
     <div align="center" width=150>k8s-metric-server</div>
   </div>
 <br/>
 <br/>
   <div>
-    <img src="./images/istio.png" alt="istio" width=150>
+    <div align="center">
+      <img src="./images/istio.png" alt="istio" width=150>
+    </div>
     <div align="center" width=150>istio</div>
   </div>
 <br/>
