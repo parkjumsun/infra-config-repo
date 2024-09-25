@@ -8,4 +8,4 @@ dashboard:
     portName: dashboard
     port: 3100
     targetPort: 3100
-    nodePort: 30003
+    nodePort: 30002

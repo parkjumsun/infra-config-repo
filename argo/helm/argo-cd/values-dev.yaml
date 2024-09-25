@@ -4,3 +4,4 @@ server:
   service:
     type: NodePort
     nodePortHttps: 30001
+    nodePortHttp: 31001
