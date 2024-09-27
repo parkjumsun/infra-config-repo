@@ -101,15 +101,28 @@ data:
     external_services:
       custom_dashboards:
         enabled: true
-      prometheus:
-        url: http://prometheus:9090/      
       istio:
-        root_namespace: istio-system
-        ingress_gateway:
-          name: gateway 
-          namespace: istio-system     
+        istiod_pod_monitoring_port: 15014
         component_status:
-          enabled: true
+          components:
+          - app_label: istiod
+            is_core: true
+      prometheus:
+        url: "http://prometheus.istio-system:9090/"
+        cache_enabled: true
+        cache_duration: 10 # 쿼리당 캐시 만료 시간(초)
+        cache_expiration: 300 # 전역 캐시 만료 시간(초)
+      grafana:
+        enabled: true
+        dashboards:
+          - name: "Istio Service Dashboard"
+          - name: "Istio Workload Dashboard"
+          - name: "Istio Mesh Dashboard"
+          - name: "Istio Control Plane Dashboard"
+          - name: "Istio Performance Dashboard"
+          - name: "Istio Wasm Extension Dashboard"
+        in_cluster_url: 'http://grafana.istio-system:3000/'
+
     istio_labels:
       ingress_gateway_label: "istio=gateway"
     identity:
