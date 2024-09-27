@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(choices: ['option', 'kubectl apply', 'kubectl delete'], name: 'DEPLOY_COMMAND', description: '배포 타입 선택')
+        choice(choices: ['option', 'kiali'], name: 'TARGET_ADD_ON', description: 'addon 선택')
+    }
+
+    environment {
+        INSTALL_PATH = 'istio/addon'
+        NAME_SPACE = 'istio-system'
+    }
+
+    stages {
+        stage('deploy virtual service') {
+            steps {
+                script{
+                    sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/${params.TARGET_ADD_ON}/${params.TARGET_ADD_ON}.yaml -n ${NAME_SPACE}"
+                }
+            }
+        }
+    }
+}
