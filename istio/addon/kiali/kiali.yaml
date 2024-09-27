@@ -18,7 +18,7 @@ metadata:
 ---
 # Source: kiali-server/templates/configmap.yaml
 apiVersion: v1
-kind: ConfigMapi
+kind: ConfigMap
 metadata:
   name: kiali
   namespace: istio-system
@@ -104,8 +104,8 @@ data:
       istio:
         root_namespace: istio-system
         ingress_gateway:
-          name: gateway  # Custom name of your Istio Gateway
-          namespace: istio-system  # Namespace where the gateway is deployed        
+          name: gateway 
+          namespace: istio-system     
         component_status:
           enabled: true
     istio_labels:
