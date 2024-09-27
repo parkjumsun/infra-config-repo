@@ -99,14 +99,13 @@ metadata:
     app.kubernetes.io/version: "2.7.3"
     app.kubernetes.io/managed-by: Helm
 spec:
-  type: NodePort
+  type: ClusterIP
   clusterIP: None
   ports:
     - name: tcp
       port: 7946
       targetPort: http-memberlist
       protocol: TCP
-      nodePort: 30006
   selector:
     app.kubernetes.io/name: loki
     app.kubernetes.io/instance: loki
