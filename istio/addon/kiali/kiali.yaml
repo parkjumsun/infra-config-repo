@@ -103,9 +103,15 @@ data:
         enabled: true
       istio:
         root_namespace: istio-system
-        ingress_gateway: 
-          name: gateway
-          namespace: istio-system
+        component_status:
+          enabled: true
+          components:
+          - app_label: istiod
+            is_core: true
+          - app_label: gateway
+            is_core: true
+            is_proxy: true
+            namespace: istio-system
 
     identity:
       cert_file: ""
