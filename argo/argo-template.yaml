@@ -1,0 +1,23 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gateway
+spec:
+  destination:
+    name: ''
+    namespace: moremore
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: gateway/helm/gateway
+    repoURL: 'https://github.com/parkjumsun/moremore-k8s'
+    targetRevision: main
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - PruneLast=true
+
+
