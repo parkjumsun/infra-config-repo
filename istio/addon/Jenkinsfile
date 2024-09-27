@@ -12,7 +12,7 @@ pipeline {
     }
 
     stages {
-        stage('deploy virtual service') {
+        stage('deploy addon') {
             steps {
                 script{
                     sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/${params.TARGET_ADD_ON}/${params.TARGET_ADD_ON}.yaml -n ${NAME_SPACE}"
