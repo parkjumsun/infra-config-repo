@@ -106,7 +106,8 @@ data:
         component_status:
           enabled: true
     istio_labels:
-      ingress_gateway_label: "istio=gateway"
+      app_label_name: "app"
+      ingress_gateway_label: "istio=istio-gateway"
       
     identity:
       cert_file: ""
