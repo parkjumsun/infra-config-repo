@@ -103,6 +103,10 @@ data:
         enabled: true
       istio:
         root_namespace: istio-system
+        ingress_gateway: 
+          name: gateway
+          namespace: istio-system
+
     identity:
       cert_file: ""
       private_key_file: ""
