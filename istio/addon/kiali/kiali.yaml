@@ -105,7 +105,9 @@ data:
         root_namespace: istio-system
         component_status:
           enabled: true
-
+    istio_labels:
+      ingress_gateway_label: "istio=gateway"
+      
     identity:
       cert_file: ""
       private_key_file: ""
