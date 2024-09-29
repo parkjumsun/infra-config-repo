@@ -107,11 +107,6 @@ data:
           components:
           - app_label: istiod
             is_core: true
-      prometheus:
-        url: "http://prometheus.istio-system:9090/"
-        cache_enabled: true
-        cache_duration: 10 # 쿼리당 캐시 만료 시간(초)
-        cache_expiration: 300 # 전역 캐시 만료 시간(초)
       grafana:
         enabled: true
         dashboards:
