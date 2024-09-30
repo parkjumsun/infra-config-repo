@@ -13,7 +13,7 @@ pipeline {
         stage('deploy k8s metric-server') {
             steps {
                 script{
-                    sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/metric-server.yaml"
+                    sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/metrics-server.yaml"
                 }
             }
         }
