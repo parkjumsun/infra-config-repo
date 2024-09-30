@@ -6,14 +6,14 @@ pipeline {
     }
 
     environment {
-        INSTALL_PATH = 'k8s-dashboard'
+        INSTALL_PATH = 'metric-server'
     }
 
     stages {
-        stage('deploy k8s dashboard') {
+        stage('deploy k8s metric-server') {
             steps {
                 script{
-                    sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/dashboard.yaml"
+                    sh "${params.DEPLOY_COMMAND} -f ${INSTALL_PATH}/metric-server.yaml"
                 }
             }
         }
