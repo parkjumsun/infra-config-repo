@@ -283,6 +283,7 @@ spec:
             storage: "10Gi"
 
 ---
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -295,4 +296,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /mnt/data/loki
+    path: /home/ubuntu/loki-pv
