@@ -3,13 +3,15 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: loki
   labels:
-    helm.sh/chart: loki-4.8.0
-    app.kubernetes.io/name: loki
-    app.kubernetes.io/instance: loki
-    app.kubernetes.io/version: "2.7.3"
-    app.kubernetes.io/managed-by: Helm
+    app: loki
+    chart: loki-2.16.0
+    release: loki-stack
+    heritage: Helm
+  annotations:
+    {}
+  name: loki-stack
+  namespace: loki-stack
 automountServiceAccountToken: true
 ---
 # Source: loki/templates/configmap.yaml
