@@ -113,13 +113,7 @@ data:
         url: 'http://j11a605.p.ssafy.io:30004/'
         dashboards:
         - name: "Istio Service Dashboard"
-          variables:
-            namespace: "var-namespace"
-            service: "var-service"
         - name: "Istio Workload Dashboard"
-          variables:
-            namespace: "var-namespace"
-            workload: "var-workload"
         - name: "Istio Mesh Dashboard"
         - name: "Istio Control Plane Dashboard"
         - name: "Istio Performance Dashboard"
