@@ -215,7 +215,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: loki
-          image: docker.io/grafana/loki:2.7.3
+          image: docker.io/grafana/loki:2.7.5
           imagePullPolicy: IfNotPresent
           args:
             - -config.file=/etc/loki/config/config.yaml
@@ -281,4 +281,3 @@ spec:
         resources:
           requests:
             storage: "10Gi"
-
