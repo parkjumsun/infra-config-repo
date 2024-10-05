@@ -109,14 +109,22 @@ data:
             is_core: true
       grafana:
         enabled: true
-        dashboards:
-          - name: "Istio Service Dashboard"
-          - name: "Istio Workload Dashboard"
-          - name: "Istio Mesh Dashboard"
-          - name: "Istio Control Plane Dashboard"
-          - name: "Istio Performance Dashboard"
-          - name: "Istio Wasm Extension Dashboard"
         in_cluster_url: 'http://grafana.istio-system:3000/'
+        url: 'http://j11a605.p.ssafy.io:30004/'
+        dashboards:
+        - name: "Istio Service Dashboard"
+          variables:
+            namespace: "var-namespace"
+            service: "var-service"
+        - name: "Istio Workload Dashboard"
+          variables:
+            namespace: "var-namespace"
+            workload: "var-workload"
+        - name: "Istio Mesh Dashboard"
+        - name: "Istio Control Plane Dashboard"
+        - name: "Istio Performance Dashboard"
+        - name: "Istio Wasm Extension Dashboard"
+
 
     istio_labels:
       ingress_gateway_label: "istio=gateway"
