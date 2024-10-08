@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice(choices: ['option', 'helm_upgrade', 'helm_uninstall'], name: 'DEPLOY_TYPE', description: '배포 타입 선택')
-        choice(choices: ['option', 'vault'], name: 'TARGET_VALUT', description: 'Valut 대상 선택')
+        choice(choices: ['option', 'vault'], name: 'TARGET_VAULT', description: 'Valut 대상 선택')
     }
 
     environment {
