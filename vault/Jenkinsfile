@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         NAME_SPACE = 'config'
-        INSTALL_PATH = 'argo'
+        INSTALL_PATH = 'vault'
     }
 
     stages {
