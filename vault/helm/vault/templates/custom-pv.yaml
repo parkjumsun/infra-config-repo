@@ -3,7 +3,6 @@ kind: PersistentVolume
 metadata:
   name: vault-pv
 spec:
-  storageClassName: "vault-storage"
   capacity:
     storage: 10Gi
   accessModes:
@@ -11,5 +10,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   hostPath:
-    path: vault-pv
+    path: /home/ubuntu/vault
 
