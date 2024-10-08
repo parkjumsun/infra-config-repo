@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(choices: ['option', 'helm_upgrade', 'helm_uninstall'], name: 'DEPLOY_TYPE', description: '배포 타입 선택')
+        choice(choices: ['option', 'vault'], name: 'TARGET_VALUT', description: 'Valut 대상 선택')
+    }
+
+    environment {
+        NAME_SPACE = 'config'
+        INSTALL_PATH = 'argo'
+    }
+
+    stages {
+        stage('deploy vault') {
+            steps {
+                script{
+                    if (params.DEPLOY_TYPE == "helm_upgrade") {
+                        HELM_DEPLOY_COMMAND =  "helm upgrade ${params.TARGET_VAULT} ./${INSTALL_PATH}/helm/${params.TARGET_VAULT} " +
+                            " -f ./${INSTALL_PATH}/helm/${params.TARGET_VAULT}/values-dev.yaml" +
+                            " -n ${NAME_SPACE} --install " + 
+                            " --wait --timeout=10m "   // 최대 10분으로 설정
+                        sh "eval ${HELM_DEPLOY_COMMAND}"
+
+                    } else if (params.DEPLOY_TYPE == "helm_uninstall") {
+                        sh "helm uninstall ${params.TARGET_VAULT} -n ${NAME_SPACE} "
+                    } else {
+                        echo "skip deploy"
+                    }
+                }
+            }
+        }
+    }
+}

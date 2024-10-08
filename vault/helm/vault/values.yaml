@@ -874,7 +874,6 @@ server:
   # different HA backend.
   ha:
     enabled: false
-    replicas: 3
 
     # Set the api_addr configuration for Vault HA
     # See https://developer.hashicorp.com/vault/docs/configuration#api_addr
