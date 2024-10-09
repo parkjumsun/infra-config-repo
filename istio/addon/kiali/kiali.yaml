@@ -118,7 +118,10 @@ data:
         - name: "Istio Control Plane Dashboard"
         - name: "Istio Performance Dashboard"
         - name: "Istio Wasm Extension Dashboard"
-
+      tracing:
+        enabled: true
+        in_cluster_url: 'http://tracing.istio-system:16685/jaeger'
+        url: 'http://j11a605.p.ssafy.io:30005/'        
 
     istio_labels:
       ingress_gateway_label: "istio=gateway"
