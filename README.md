@@ -62,7 +62,7 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/kiali.png" alt="istio" width=150>
+      <img src="./images/kiali.png" alt="kiali" width=150>
     </div>
     <div align="center" width=150>kiali</div>
   </div>
@@ -70,7 +70,7 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/prometheus.png" alt="istio" width=150>
+      <img src="./images/prometheus.png" alt="prometheus" width=150>
     </div>
     <div align="center" width=150>prometheus</div>
   </div>
@@ -78,7 +78,7 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/grafana.png" alt="istio" width=150>
+      <img src="./images/grafana.png" alt="grafana" width=150>
     </div>
     <div align="center" width=150>grafana</div>
   </div>
@@ -86,7 +86,7 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/loki.jpg" alt="istio" width=150>
+      <img src="./images/loki.jpg" alt="grafana loki" width=150>
     </div>
     <div align="center" width=150>loki</div>
   </div>
@@ -94,9 +94,17 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/jaeger.png" alt="istio" width=150>
+      <img src="./images/jaeger.png" alt="jaeger" width=150>
     </div>
     <div align="center" width=150>jaeger</div>
+  </div>
+<br/>
+<br/>
+  <div>
+    <div align="center">
+      <img src="./images/vault.png" alt="istio" width=150>
+    </div>
+    <div align="center" width=150>vault</div>
   </div>
 <br/>
 <br/>
