@@ -7,7 +7,7 @@ I have stored various configurations in this repository, including Kubernetes ma
 
 It contains common Kubernetes (k8s) configurations with a Jenkinsfile to set up the pipeline and simplify deployment.
 
-Additionally, I’ve added a git submodule to demonstrate the infrastructure setup of my personal project. You can see how I configure my personal system through submodule repository.
+Additionally, I’ve added a git submodule to demonstrate the infrastructure setup of my personal project. Anyone can see how I configure my personal system through submodule repository.
 
 Here is a list of infrastructure tool included in this repository.
 
