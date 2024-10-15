@@ -102,9 +102,27 @@ Here is a list of infrastructure tool included in this repository.
 <br/>
   <div>
     <div align="center">
-      <img src="./images/vault.png" alt="istio" width=150>
+      <img src="./images/vault.png" alt="valut" width=150>
     </div>
     <div align="center" width=150>vault</div>
+  </div>
+<br/>
+<br/>
+
+  <div>
+    <div align="center">
+      <img src="./images/minio.png" alt="minio" width=150>
+    </div>
+    <div align="center" width=150>minio</div>
+  </div>
+<br/>
+<br/>
+
+  <div>
+    <div align="center">
+      <img src="./images/longhorn.png" alt="longhorn" width=150>
+    </div>
+    <div align="center" width=150>longhorn</div>
   </div>
 <br/>
 <br/>
